@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+/* font-family: 'Inter', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  color: #202046;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.section {
+  width: 1350px;
+  height: 620px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .section {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.section .testimonial {
+  background-color: white;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.164);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.164);
+  width: 1100px;
+  height: 580px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial {
+    width: 100vw;
+    height: 100vh;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+            box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.section .testimonial .description-column {
+  background-image: url("images/pattern-curve.svg"), url("images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom, 50% 30%;
+  background-size: 100%, 25%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .description-column {
+    background-position: left bottom, 50% 0%;
+    background-size: 70%, 15%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+}
+
+.section .testimonial .description-column .description-container {
+  font-size: .8rem;
+  width: 510px;
+  height: 212px;
+  position: absolute;
+  left: 115px;
+  top: 210px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .description-column .description-container {
+    font-size: .56rem;
+    width: 310px;
+    height: 212px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 13px;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+.section .testimonial .description-column .description-container .description {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.24s;
+  transition: -webkit-transform 0.24s;
+  transition: transform 0.24s;
+  transition: transform 0.24s, -webkit-transform 0.24s;
+}
+
+.section .testimonial .description-column .description-container .description div {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .description-column .description-container .description div {
+    height: 212px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.section .testimonial .description-column .description-container .description div .paragraph {
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.section .testimonial .description-column .description-container .description div .author {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .description-column .description-container .description div .author {
+    display: inline-block;
+    font-size: .55rem;
+    font-weight: 700;
+  }
+}
+
+.section .testimonial .description-column .description-container .description div .position {
+  color: #babacf;
+  font-size: .6rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .description-column .description-container .description div .position {
+    display: block;
+    font-size: .45rem;
+    margin-left: 0;
+  }
+}
+
+.section .testimonial .photo-slider-column {
+  background-image: url("images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 78%;
+  background-position: 55% 33%;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .photo-slider-column {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    background-size: 87%;
+    background-position: center;
+    position: relative;
+    padding: 50px;
+  }
+}
+
+.section .testimonial .photo-slider-column .photo-image-container {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(141, 141, 141, 0.164);
+          box-shadow: 0 5px 10px 0 rgba(141, 141, 141, 0.164);
+  position: absolute;
+  left: 130px;
+  top: 80px;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .photo-slider-column .photo-image-container {
+    width: 254px;
+    height: 254px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 68px;
+  }
+}
+
+.section .testimonial .photo-slider-column .photo-image-container .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.24s;
+  transition: -webkit-transform 0.24s;
+  transition: transform 0.24s;
+  transition: transform 0.24s, -webkit-transform 0.24s;
+}
+
+.section .testimonial .photo-slider-column .photo-image-container .images .image {
+  max-width: 100%;
+  display: block;
+}
+
+.section .testimonial .arrows {
+  position: absolute;
+  bottom: 80px;
+  left: 150px;
+  z-index: 200;
+  width: 100px;
+  height: 45px;
+  background-color: white;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px -10px 60px white, 0 5px 60px 5px rgba(0, 0, 0, 0.493);
+          box-shadow: 0px -10px 60px white, 0 5px 60px 5px rgba(0, 0, 0, 0.493);
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .arrows {
+    bottom: 45px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 75px;
+    height: 35px;
+  }
+}
+
+.section .testimonial .arrows .left {
+  width: 50%;
+  height: 100%;
+  border-radius: 30px 0 0 30px;
+  background-image: url("images/icon-prev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .arrows .left {
+    background-size: 24.8%;
+  }
+}
+
+.section .testimonial .arrows .left:hover {
+  background-color: #202046;
+}
+
+.section .testimonial .arrows .right {
+  width: 50%;
+  height: 100%;
+  border-radius: 0 30px 30px 0;
+  background-image: url("images/icon-next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+@media screen and (max-width: 375px) {
+  .section .testimonial .arrows .right {
+    background-size: 25%;
+  }
+}
+
+.section .testimonial .arrows .right:hover {
+  background-color: #202046;
+}
+/*# sourceMappingURL=style.css.map */
